@@ -1,0 +1,27 @@
+{
+  "name": "meeehdi-dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "oxlint",
+    "fmt": "oxfmt",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@nuxt/a11y": "1.0.0-alpha.1",
+    "@nuxt/ui": "^4.4.0",
+    "nuxt": "^4.3.1",
+    "oxfmt": "^0.34.0",
+    "oxlint": "^1.49.0",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.2.0",
+    "vue": "^3.5.28",
+    "vue-router": "^4.6.4",
+    "vue-tsc": "^3.2.4"
+  }
+}
