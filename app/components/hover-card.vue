@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="group relative flex items-center justify-center overflow-hidden rounded-xl">
+  <li class="group relative flex items-center justify-center overflow-hidden rounded-xl">
     <div
       class="bg-primary-950/90 absolute inset-0 z-10 flex flex-col justify-between p-4 text-white opacity-100 transition-opacity duration-300 group-hover:opacity-100 md:opacity-0"
     >
@@ -37,6 +37,7 @@ defineProps<{
         'light:drop-shadow-sm light:drop-shadow-black/50 p-1': light,
         'dark:invert': dark,
       }"
+      :alt="`Logo ${title}`"
     />
-  </div>
+  </li>
 </template>

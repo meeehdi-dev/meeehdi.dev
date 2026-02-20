@@ -1,3 +1,4 @@
 <template>
-  <div>Contact</div>
+  <h1>Contact</h1>
+  <ContactForm />
 </template>

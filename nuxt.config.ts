@@ -4,4 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@nuxt/a11y"],
   css: ["~/assets/css/main.css"],
+  runtimeConfig: {
+    discord: {
+      webhookUrl: "",
+    },
+  },
 });

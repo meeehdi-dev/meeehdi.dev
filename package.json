@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/ui": "^4.4.0",
+    "discord.js": "^14.25.1",
     "nuxt": "^4.3.1",
     "oxfmt": "^0.34.0",
     "oxlint": "^1.49.0",
@@ -22,6 +23,7 @@
     "tailwindcss": "^4.2.0",
     "vue": "^3.5.28",
     "vue-router": "^4.6.4",
-    "vue-tsc": "^3.2.4"
+    "vue-tsc": "^3.2.4",
+    "zod": "^4.3.6"
   }
 }

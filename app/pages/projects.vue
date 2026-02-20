@@ -1,3 +1,8 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: "/projects",
+});
+</script>
 <template>
   <UPageSection
     title="Liste des clients"

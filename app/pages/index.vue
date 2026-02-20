@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: "/home",
+});
+</script>
+
 <template>
   <div>
     <UPageSection orientation="horizontal" :ui="{ container: 'lg:pt-32' }">
@@ -5,14 +11,15 @@
         <div class="flex flex-col md:flex-row md:gap-2">
           <span>
             Salut
-            <Icon name="fa6-solid:hand-peace" class="text-primary size-10" /></span
-          ><span>Moi, c'est Mehdi. </span>
+            <Icon name="fa6-solid:hand-peace" class="text-primary size-10"
+          /></span>
+          <h1>Moi, c'est Mehdi.</h1>
         </div>
       </template>
-      <img src="/me.jpeg" class="mx-auto hidden w-1/2 rounded-xl md:flex" />
+      <img src="/me.jpeg" class="mx-auto hidden w-1/2 rounded-xl md:flex" alt="Photo de Mehdi" />
       <template #description>
         <div class="flex flex-col gap-2">
-          <img src="/me.jpeg" class="mx-auto w-1/2 rounded-xl md:hidden" />
+          <img src="/me.jpeg" class="mx-auto w-1/2 rounded-xl md:hidden" alt="Photo de Mehdi" />
           <div>
             <p>
               Je développe des applications web depuis plus de 10 ans maintenant, et en tant que
@@ -24,10 +31,14 @@
               en savoir plus.
             </p>
             <p class="mt-4 flex justify-center gap-8">
-              <ULink to="https://github.com/meeehdi-dev" target="_blank">
+              <ULink to="https://github.com/meeehdi-dev" target="_blank" aria-label="Github">
                 <Icon name="fa6-brands:github" class="size-10" />
               </ULink>
-              <ULink to="https://www.linkedin.com/in/mehdi-mhiri/" target="_blank">
+              <ULink
+                to="https://www.linkedin.com/in/mehdi-mhiri/"
+                target="_blank"
+                aria-label="Linkedin"
+              >
                 <Icon name="fa6-brands:linkedin" class="size-10" />
               </ULink>
             </p>

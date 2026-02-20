@@ -11,7 +11,11 @@ const navigationItems = ref([
   <UHeader mode="drawer">
     <template #title>
       <div class="flex gap-2 items-center">
-        <img src="/kokoro-soft.png" class="h-16 p-1 drop-shadow-sm light:drop-shadow-primary" />
+        <img
+          src="/kokoro-soft.png"
+          class="h-16 p-1 drop-shadow-sm light:drop-shadow-primary"
+          alt="Logo Kokoro Soft"
+        />
         <span class="text-4xl lg:text-7xl">meeehdi.dev</span>
       </div>
     </template>

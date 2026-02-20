@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useSeoMeta({
+  titleTemplate: (title) => (title ? `${title} - meeehdi.dev` : "meeehdi.dev"),
+});
+</script>
+
 <template>
   <UApp>
     <Header />
