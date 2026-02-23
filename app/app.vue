@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+  htmlAttrs: { lang: "fr" },
+});
 useSeoMeta({
   titleTemplate: (title) => (title ? `${title} - meeehdi.dev` : "meeehdi.dev"),
 });
