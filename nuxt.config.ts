@@ -4,6 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@nuxt/a11y", "@nuxt/scripts", "@nuxtjs/turnstile"],
   css: ["~/assets/css/main.css"],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "fr",
+      },
+    },
+  },
   runtimeConfig: {
     discord: {
       webhookUrl: "",
@@ -18,4 +25,3 @@ export default defineNuxtConfig({
     },
   },
 });
-
