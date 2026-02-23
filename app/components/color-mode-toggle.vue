@@ -17,6 +17,7 @@ const { tooltip } = defineProps<{ tooltip?: boolean }>();
     <UButton
       :icon="isDark ? 'lucide:moon' : 'lucide:sun'"
       :ui="{ leadingIcon: 'size-4' }"
+      aria-label="Toggle color mode"
       color="primary"
       variant="ghost"
       class="cursor-pointer"

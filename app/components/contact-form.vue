@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import type { FormSubmitEvent } from "@nuxt/ui";
 
-const DEFAULT_STATE: Contact = {
+const DEFAULT_STATE: ContactForm = {
   email: "",
   subject: "",
   message: "",
+  token: "",
 };
 
-const state = reactive<Partial<Contact>>({ ...DEFAULT_STATE });
+const state = reactive<Partial<ContactForm>>({ ...DEFAULT_STATE });
+
+const turnstile = useTemplateRef("turnstile");
 
 const toast = useToast();
 const submitting = ref(false);
-async function onSubmit(event: FormSubmitEvent<Contact>) {
+async function onSubmit(event: FormSubmitEvent<ContactForm>) {
   submitting.value = true;
   try {
     await $fetch("/api/contact", {
@@ -23,8 +26,8 @@ async function onSubmit(event: FormSubmitEvent<Contact>) {
       description: "Votre message a bien été envoyé !",
       color: "success",
     });
-    // FIXME: reset form
-    // Object.assign(state, DEFAULT_STATE);
+    Object.assign(state, DEFAULT_STATE);
+    turnstile.value?.reset();
   } catch (error) {
     toast.add({
       title: "Erreur",
@@ -38,7 +41,7 @@ async function onSubmit(event: FormSubmitEvent<Contact>) {
 </script>
 
 <template>
-  <UForm :schema="ContactSchema" :state="state" class="flex flex-col gap-4" @submit="onSubmit">
+  <UForm :schema="ContactFormSchema" :state="state" class="flex flex-col gap-4" @submit="onSubmit">
     <UFormField label="Email" name="email" required>
       <UInput v-model="state.email" type="email" />
     </UFormField>
@@ -51,6 +54,7 @@ async function onSubmit(event: FormSubmitEvent<Contact>) {
       <UTextarea v-model="state.message" />
     </UFormField>
 
+    <NuxtTurnstile ref="turnstile" v-model="state.token" class="self-center" />
     <UButton icon="lucide:send" type="submit" class="self-center" :loading="submitting"
       >Submit</UButton
     >
