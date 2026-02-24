@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
     public: {
       turnstile: {
-        siteKey: "",
+        siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
       },
     },
   },
