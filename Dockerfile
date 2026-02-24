@@ -14,6 +14,8 @@ RUN bun --bun run build
 FROM base AS production
 WORKDIR /app
 
+RUN apt update -y && apt install curl wget -y
+
 COPY --from=build /app/.output /app
 
 EXPOSE 3000/tcp
