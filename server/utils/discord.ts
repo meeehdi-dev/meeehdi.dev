@@ -6,16 +6,22 @@ export const useDiscordWebhook = (event: H3Event) => {
     url: useRuntimeConfig(event).discord.webhookUrl,
   });
 
+  function send(data: Contact) {
+    const mailto = encodeURI(
+      `mailto:${data.email}?subject=Re: ${data.subject}`,
+    );
+
+    return client.send({
+      content: `## ${data.subject}\n\n${data.message}`,
+      embeds: [
+        new EmbedBuilder().setDescription(
+          `*From:* **[${data.email}](${mailto})**`,
+        ),
+      ],
+    });
+  }
+
   return {
-    send: (data: Contact) => {
-      return client.send({
-        content: `## ${data.subject}\n\n${data.message}`,
-        embeds: [
-          new EmbedBuilder().setDescription(
-            `*From:* **[${data.email}](mailto:${data.email}?subject=Re:%20${data.subject})**`,
-          ),
-        ],
-      });
-    },
+    send,
   };
 };
