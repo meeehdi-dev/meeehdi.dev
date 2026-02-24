@@ -96,3 +96,9 @@ useSeoMeta({
     </UPageSection>
   </div>
 </template>
+
+<style scoped>
+a {
+  @apply underline;
+}
+</style>
