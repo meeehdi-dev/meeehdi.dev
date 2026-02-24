@@ -20,7 +20,8 @@ const { tooltip } = defineProps<{ tooltip?: boolean }>();
       aria-label="Toggle color mode"
       color="primary"
       variant="ghost"
-      class="cursor-pointer"
+      class="cursor-pointer md:ml-4"
+      size="lg"
       @click="isDark = !isDark"
     >
       <span v-if="tooltip">{{ isDark ? "++" : "--" }}brightness</span>
