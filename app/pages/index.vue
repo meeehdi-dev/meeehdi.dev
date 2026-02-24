@@ -88,7 +88,7 @@ useSeoMeta({
           title="Coca-Cola"
           description="Développement d'un PoC (Webapp NextJS mobile-first) destiné aux employés de la marque."
           :tools="['NextJS']"
-          link="https://www.nirio.fr/"
+          link="https://www.coca-colacompany.com/"
           image="/tccc.svg"
           dark
         />
