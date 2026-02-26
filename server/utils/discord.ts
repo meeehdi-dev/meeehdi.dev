@@ -7,17 +7,11 @@ export const useDiscordWebhook = (event: H3Event) => {
   });
 
   function send(data: Contact) {
-    const mailto = encodeURI(
-      `mailto:${data.email}?subject=Re: ${data.subject}`,
-    );
+    const mailto = encodeURI(`mailto:${data.email}?subject=Re: ${data.subject}`);
 
     return client.send({
       content: `## ${data.subject}\n\n${data.message}`,
-      embeds: [
-        new EmbedBuilder().setDescription(
-          `*From:* **[${data.email}](${mailto})**`,
-        ),
-      ],
+      embeds: [new EmbedBuilder().setDescription(`*From:* **[${data.email}](${mailto})**`)],
     });
   }
 

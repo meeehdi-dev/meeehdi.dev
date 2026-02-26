@@ -27,7 +27,7 @@ const { tooltip } = defineProps<{ tooltip?: boolean }>();
       <span v-if="tooltip">{{ isDark ? "++" : "--" }}brightness</span>
     </UButton>
     <template #fallback>
-      <div class="w-8 h-8" />
+      <div class="h-8 w-8" />
     </template>
   </ClientOnly>
 </template>
