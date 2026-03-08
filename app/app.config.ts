@@ -3,6 +3,7 @@ export default defineAppConfig({
     colors: {
       neutral: "zinc",
       primary: "amber",
+      secondary: "blue",
     },
     pageSection: {
       slots: {
