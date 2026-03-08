@@ -1,7 +1,8 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "slate",
+      neutral: "zinc",
+      primary: "amber",
     },
     pageSection: {
       slots: {
