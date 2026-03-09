@@ -16,22 +16,34 @@ useSeoMeta({
           <h1>Moi, c'est Mehdi.</h1>
         </div>
       </template>
-      <img src="/me.jpeg" class="mx-auto hidden w-1/2 rounded-xl md:flex" alt="Photo de Mehdi" />
+      <img
+        src="/me.jpeg"
+        class="mx-auto hidden w-1/2 rounded-xl md:flex"
+        alt="Photo de Mehdi"
+      />
       <template #description>
         <div class="flex flex-col gap-2">
-          <img src="/me.jpeg" class="mx-auto w-1/2 rounded-xl md:hidden" alt="Photo de Mehdi" />
+          <img
+            src="/me.jpeg"
+            class="mx-auto w-1/2 rounded-xl md:hidden"
+            alt="Photo de Mehdi"
+          />
           <div>
             <p>
-              Je développe des applications web depuis plus de 10 ans maintenant, et en tant que
-              freelance depuis un peu plus de 3 ans.
+              Je développe des applications web depuis plus de 10 ans
+              maintenant, et en tant que freelance depuis un peu plus de 3 ans.
             </p>
             <p>
               N'hésite pas à visiter
-              <ULink to="/projects">mes projets</ULink> ou <ULink to="/resume">mon cv</ULink> pour
-              en savoir plus.
+              <ULink to="/projects">mes projets</ULink> ou
+              <ULink to="/resume">mon cv</ULink> pour en savoir plus.
             </p>
             <p class="mt-4 flex justify-center gap-8">
-              <ULink to="https://github.com/meeehdi-dev" target="_blank" aria-label="Github">
+              <ULink
+                to="https://github.com/meeehdi-dev"
+                target="_blank"
+                aria-label="Github"
+              >
                 <Icon name="fa6-brands:github" class="size-10" />
               </ULink>
               <ULink
@@ -53,16 +65,22 @@ useSeoMeta({
           title="NextJS"
           description="Adepte de React et NextJS depuis près de 5 ans."
           image="/nextjs.svg"
+          link="https://nextjs.org/"
+          :tools="['Typescript', 'React', 'Node']"
         />
         <HoverCard
           title="Nuxt"
           description="En rodage sur ce framework depuis plus d'un an."
           image="/nuxt.svg"
+          link="https://nuxt.com/"
+          :tools="['Typescript', 'Vue', 'Nitro']"
         />
         <HoverCard
           title="NodeJS"
           description="10 ans passés ensemble ! Pour toujours et à jamais."
           image="/nodejs.svg"
+          link="https://nodejs.org/"
+          :tools="['Typescript', 'Express']"
         />
       </template>
     </UPageSection>

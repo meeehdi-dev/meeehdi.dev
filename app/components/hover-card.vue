@@ -11,20 +11,24 @@ defineProps<{
 </script>
 
 <template>
-  <li class="group relative flex items-center justify-center overflow-hidden rounded-xl">
+  <li
+    class="group relative flex items-center justify-center overflow-hidden rounded-xl"
+  >
     <div
       class="dark:bg-neutral-800/98 light:bg-neutral-800/90 absolute inset-0 z-10 flex flex-col justify-between p-4 text-white opacity-100 transition-opacity duration-300 group-hover:opacity-100 md:opacity-0"
     >
-      <div>
+      <div class="flex flex-col gap-8">
         <p class="text-4xl">
           {{ title }}
         </p>
-        <p class="text-2xl" v-if="description">
-          {{ description }}
-        </p>
-        <p class="text-primary-300 text-sm" v-if="tools">
-          {{ tools.join(", ").concat(".") }}
-        </p>
+        <div class="flex flex-col gap-2 border-l-2 border-primary pl-2">
+          <p class="text-xl md:text-2xl" v-if="description">
+            {{ description }}
+          </p>
+          <p class="text-primary-300 text-sm" v-if="tools">
+            {{ tools.join(", ").concat(".") }}
+          </p>
+        </div>
       </div>
       <ULink :to="link" target="_blank" v-if="link" class="text-primary-300">
         {{ link }}
