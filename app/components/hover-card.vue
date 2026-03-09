@@ -22,7 +22,7 @@ defineProps<{
           {{ title }}
         </p>
         <div class="flex flex-col gap-2 border-l-2 border-primary pl-2">
-          <p class="text-xl md:text-2xl" v-if="description">
+          <p class="text-xl" v-if="description">
             {{ description }}
           </p>
           <p class="text-primary-300 text-sm" v-if="tools">
