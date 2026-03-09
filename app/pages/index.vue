@@ -8,12 +8,12 @@ useSeoMeta({
   <div>
     <UPageSection orientation="horizontal" :ui="{ container: 'lg:pt-32' }">
       <template #title>
-        <div class="flex flex-col md:flex-row md:gap-2">
-          <span>
+        <div class="flex flex-col md:flex-row md:gap-2 items-baseline">
+          <span class="whitespace-nowrap">
             Salut
             <Icon name="fa6-solid:hand-peace" class="text-primary size-10"
           /></span>
-          <h1>Moi, c'est Mehdi.</h1>
+          <h1 class="whitespace-nowrap">Moi, c'est Mehdi.</h1>
         </div>
       </template>
       <img
