@@ -5,8 +5,9 @@ useSeoMeta({
 </script>
 <template>
   <UPageSection
-    title="Liste des clients"
+    title="Mes clients"
     description="Survolez les cartes pour avoir + d'infos sur les projets"
+    :ui="{ description: 'hidden md:block' }"
   >
     <template #features>
       <HoverCard

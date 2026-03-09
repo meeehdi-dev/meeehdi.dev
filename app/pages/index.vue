@@ -59,13 +59,17 @@ useSeoMeta({
       </template>
     </UPageSection>
 
-    <UPageSection title="Mon expertise">
+    <UPageSection
+      title="Mon expertise"
+      :ui="{ features: 'grid-cols-2 md:grid-cols-4 lg:grid-cols-6' }"
+    >
       <template #features>
         <HoverCard
           title="NextJS"
           description="Adepte de React et NextJS depuis près de 5 ans."
           image="/nextjs.svg"
           link="https://nextjs.org/"
+          class="col-span-2"
           :tools="['Typescript', 'React', 'Node']"
         />
         <HoverCard
@@ -73,6 +77,7 @@ useSeoMeta({
           description="En rodage sur ce framework depuis plus d'un an."
           image="/nuxt.svg"
           link="https://nuxt.com/"
+          class="col-span-2"
           :tools="['Typescript', 'Vue', 'Nitro']"
         />
         <HoverCard
@@ -80,34 +85,41 @@ useSeoMeta({
           description="10 ans passés ensemble ! Pour toujours et à jamais."
           image="/nodejs.svg"
           link="https://nodejs.org/"
+          class="col-span-2 md:col-start-2 lg:col-start-auto"
           :tools="['Typescript', 'Express']"
         />
       </template>
     </UPageSection>
 
-    <UPageSection title="Mes projets marquants">
+    <UPageSection
+      title="Mes projets marquants"
+      :ui="{ features: 'grid-cols-2 md:grid-cols-4 lg:grid-cols-6' }"
+    >
       <template #features>
         <HoverCard
           title="LVMH"
           description="Evolution, optimisation et maintien de différents sites de la marque."
-          :tools="['NestJS', 'NextJS', 'Prismic']"
-          link="https://www.lvmh.com/"
           image="/lvmh.svg"
+          link="https://www.lvmh.com/"
+          class="col-span-2"
+          :tools="['NestJS', 'NextJS', 'Prismic']"
           light
         />
         <HoverCard
           title="Nirio (FDJ)"
           description="Création du site web Nirio, et configuration de la base Strapi pour la partie CMS."
-          :tools="['NextJS', 'Strapi']"
-          link="https://www.nirio.fr/"
           image="/fdj.svg"
+          link="https://www.nirio.fr/"
+          class="col-span-2"
+          :tools="['NextJS', 'Strapi']"
         />
         <HoverCard
           title="Coca-Cola"
           description="Développement d'un PoC (Webapp NextJS mobile-first) destiné aux employés de la marque."
-          :tools="['NextJS']"
-          link="https://www.coca-colacompany.com/"
           image="/tccc.svg"
+          class="col-span-2 md:col-start-2 lg:col-start-auto"
+          link="https://www.coca-colacompany.com/"
+          :tools="['NextJS']"
           dark
         />
       </template>
