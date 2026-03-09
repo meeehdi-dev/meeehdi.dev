@@ -7,7 +7,7 @@ useSeoMeta({
   <UPageSection
     title="Mes clients"
     description="Survolez les cartes pour avoir + d'infos sur les projets"
-    :ui="{ description: 'hidden md:block' }"
+    :ui="{ description: 'pointer-coarse:hidden' }"
   >
     <template #features>
       <HoverCard

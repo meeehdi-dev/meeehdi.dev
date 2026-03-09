@@ -15,7 +15,7 @@ defineProps<{
     class="group relative flex items-center justify-center overflow-hidden rounded-xl"
   >
     <div
-      class="dark:bg-neutral-800/98 light:bg-neutral-800/90 absolute inset-0 z-10 flex flex-col justify-between p-4 text-white opacity-100 transition-opacity duration-300 group-hover:opacity-100 md:opacity-0"
+      class="dark:bg-neutral-800/98 light:bg-neutral-800/90 absolute inset-0 z-10 flex flex-col justify-between p-4 text-white opacity-100 transition-opacity duration-300 group-hover:opacity-100 pointer-fine:opacity-0"
     >
       <div class="flex flex-col gap-8">
         <p class="text-4xl">
