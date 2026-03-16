@@ -102,7 +102,7 @@ useSeoMeta({
           image="/lvmh.svg"
           link="https://www.lvmh.com/"
           class="col-span-2"
-          :tools="['NestJS', 'NextJS', 'Prismic']"
+          :tools="['NextJS', 'NestJS', 'Prismic']"
           light
         />
         <HoverCard
