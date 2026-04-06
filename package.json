@@ -15,15 +15,15 @@
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/scripts": "0.13.2",
-    "@nuxt/ui": "^4.5.1",
-    "@nuxtjs/sitemap": "7.6.0",
-    "@nuxtjs/turnstile": "1.1.1",
-    "discord.js": "^14.25.1",
-    "nuxt": "^4.3.1",
-    "oxfmt": "^0.36.0",
-    "oxlint": "^1.51.0",
+    "@nuxt/ui": "^4.6.1",
+    "@nuxtjs/sitemap": "8.0.11",
+    "@nuxtjs/turnstile": "1.1.2",
+    "discord.js": "^14.26.2",
+    "nuxt": "^4.4.2",
+    "oxfmt": "^0.43.0",
+    "oxlint": "^1.58.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.2.1",
+    "tailwindcss": "^4.2.2",
     "zod": "^4.3.6"
   },
   "version": "1.0.0"
