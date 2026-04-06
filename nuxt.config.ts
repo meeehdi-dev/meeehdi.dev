@@ -2,13 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: [
-    "@nuxt/ui",
-    "@nuxt/a11y",
-    "@nuxt/scripts",
-    "@nuxtjs/turnstile",
-    "@nuxtjs/sitemap",
-  ],
+  modules: ["@nuxt/ui", "@nuxt/a11y", "@nuxt/scripts", "@nuxtjs/turnstile", "@nuxtjs/sitemap"],
   css: ["~/assets/css/main.css"],
   runtimeConfig: {
     discord: {
