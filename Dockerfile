@@ -11,12 +11,13 @@ COPY . .
 
 RUN bun --bun run build
 
-FROM base AS production
+FROM oven/bun:1-alpine AS production
 WORKDIR /app
 
-RUN apt update -y && apt install curl wget -y
+ENV NODE_ENV=production
 
-COPY --from=build /app/.output /app
+COPY --from=build --chown=bun:bun /app/.output /app
 
+USER bun
 EXPOSE 3000/tcp
 ENTRYPOINT [ "bun", "--bun", "run", "/app/server/index.mjs" ]

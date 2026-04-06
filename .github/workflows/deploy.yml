@@ -1,0 +1,60 @@
+on:
+  release:
+    types: [published]
+  workflow_call:
+    secrets:
+      COOLIFY_API_TOKEN:
+        required: true
+      COOLIFY_API_URL:
+        required: true
+      COOLIFY_APP_UUID:
+        required: true
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v6
+      - run: echo "IMAGE_NAME=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+      - uses: docker/login-action@v4
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=raw,value=latest
+      - uses: docker/setup-buildx-action@v4
+      - uses: docker/build-push-action@v7
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+  notify-coolify:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - run: |
+          if [ -z "$COOLIFY_API_TOKEN" ] || [ -z "$COOLIFY_API_URL" ] || [ -z "$COOLIFY_APP_UUID" ]; then
+            echo "Coolify secrets are not fully configured. Skipping deployment trigger."
+            exit 0
+          fi
+
+          echo "Triggering deployment on Coolify..."
+          curl --request POST "${COOLIFY_API_URL}/api/v1/deploy?uuid=${COOLIFY_APP_UUID}&force=false" \
+               --header "Authorization: Bearer ${COOLIFY_API_TOKEN}" \
+               --fail --silent --show-error
+        env:
+          COOLIFY_API_TOKEN: ${{ secrets.COOLIFY_API_TOKEN }}
+          COOLIFY_API_URL: ${{ secrets.COOLIFY_API_URL }}
+          COOLIFY_APP_UUID: ${{ secrets.COOLIFY_APP_UUID }}
+env:
+  REGISTRY: ghcr.io
