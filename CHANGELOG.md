@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.0.0...v1.0.1) (2026-04-06)
+
+
+### Bug Fixes
+
+* reset lock ([d71a3cc](https://github.com/meeehdi-dev/meeehdi.dev/commit/d71a3ccd011591c98c29cb8fee8e84a2a1d1d82c))
+
 ## 1.0.0 (2026-04-06)
 
 
