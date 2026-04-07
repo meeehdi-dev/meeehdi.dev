@@ -20,8 +20,8 @@
     "@nuxtjs/turnstile": "1.1.2",
     "discord.js": "^14.26.2",
     "nuxt": "^4.4.2",
-    "oxfmt": "^0.43.0",
-    "oxlint": "^1.58.0",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.2.2",
     "zod": "^4.3.6"
