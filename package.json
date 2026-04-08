@@ -16,7 +16,7 @@
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/scripts": "0.13.2",
     "@nuxt/ui": "^4.6.1",
-    "@nuxtjs/sitemap": "8.0.11",
+    "@nuxtjs/sitemap": "8.0.12",
     "@nuxtjs/turnstile": "1.1.2",
     "discord.js": "^14.26.2",
     "nuxt": "^4.4.2",
