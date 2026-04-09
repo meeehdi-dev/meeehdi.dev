@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.0.1...v1.0.2) (2026-04-09)
+
+
+### Bug Fixes
+
+* **ci:** explicit workflow names ([1a26613](https://github.com/meeehdi-dev/meeehdi.dev/commit/1a2661341a9317b6ef69479acd65be9f044867b8))
+* **contact:** localized error messages ([22b27ed](https://github.com/meeehdi-dev/meeehdi.dev/commit/22b27ed54576bc249a1e92f93b0256b8766ae18e))
+
 ## [1.0.1](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.0.0...v1.0.1) (2026-04-06)
 
 
