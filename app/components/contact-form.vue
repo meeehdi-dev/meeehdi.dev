@@ -41,21 +41,45 @@ async function onSubmit(event: FormSubmitEvent<ContactForm>) {
 </script>
 
 <template>
-  <UForm :schema="ContactFormSchema" :state="state" class="flex flex-col gap-4" @submit="onSubmit">
-    <UFormField label="Email" name="email" required>
+  <UForm
+    :schema="ContactFormSchema"
+    :state="state"
+    class="flex flex-col gap-4"
+    @submit="onSubmit"
+  >
+    <UFormField
+      label="Email"
+      name="email"
+      required
+      error="Veuillez saisir une adresse email valide"
+    >
       <UInput v-model="state.email" type="email" />
     </UFormField>
 
-    <UFormField label="Objet" name="subject" required>
+    <UFormField
+      label="Objet"
+      name="subject"
+      required
+      error="Veuillez saisir un objet"
+    >
       <UInput v-model="state.subject" />
     </UFormField>
 
-    <UFormField label="Message" name="message" required>
+    <UFormField
+      label="Message"
+      name="message"
+      required
+      error="Veuillez saisir un message"
+    >
       <UTextarea v-model="state.message" />
     </UFormField>
 
     <NuxtTurnstile ref="turnstile" v-model="state.token" class="self-center" />
-    <UButton icon="lucide:send" type="submit" class="self-center" :loading="submitting"
+    <UButton
+      icon="lucide:send"
+      type="submit"
+      class="self-center"
+      :loading="submitting"
       >Submit</UButton
     >
   </UForm>
