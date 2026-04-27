@@ -15,21 +15,21 @@
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/scripts": "0.13.2",
-    "@nuxt/ui": "^4.6.1",
-    "@nuxtjs/sitemap": "8.0.12",
+    "@nuxt/ui": "^4.7.0",
+    "@nuxtjs/sitemap": "8.0.14",
     "@nuxtjs/turnstile": "1.1.2",
-    "discord.js": "^14.26.2",
+    "discord.js": "^14.26.3",
     "nuxt": "^4.4.2",
-    "oxfmt": "^0.44.0",
-    "oxlint": "^1.59.0",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.2.2",
+    "oxfmt": "^0.46.0",
+    "oxlint": "^1.61.0",
+    "prettier-plugin-tailwindcss": "^0.7.3",
+    "tailwindcss": "^4.2.4",
     "zod": "^4.3.6"
   },
   "devDependencies": {
     "@iconify-json/fa6-brands": "^1.2.6",
     "@iconify-json/fa6-solid": "^1.2.4",
-    "@iconify-json/lucide": "^1.2.101"
+    "@iconify-json/lucide": "^1.2.104"
   },
   "version": "1.0.2"
 }
