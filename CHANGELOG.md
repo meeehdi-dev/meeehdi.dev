@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.0.2...v1.1.0) (2026-05-25)
+
+
+### Features
+
+* migrate to devcontainers and pnpm ([502927a](https://github.com/meeehdi-dev/meeehdi.dev/commit/502927a573b67ebbcb3e52aa46bda1d809dc8dae))
+
 ## [1.0.2](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.0.1...v1.0.2) (2026-04-09)
 
 
