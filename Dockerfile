@@ -1,23 +1,27 @@
-FROM oven/bun:1 AS base
+FROM node:24-alpine AS base
+
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME/bin:$PATH"
+RUN corepack enable
+
+WORKDIR /app
+
 
 FROM base AS build
-WORKDIR /app
 
-COPY package.json bun.lock* ./
-
-RUN bun install --frozen-lockfile --ignore-scripts
-
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
 COPY . .
+RUN pnpm run build
 
-RUN bun --bun run build
 
-FROM oven/bun:1-alpine AS production
-WORKDIR /app
+FROM base AS production
 
 ENV NODE_ENV=production
 
-COPY --from=build --chown=bun:bun /app/.output /app
+COPY --from=build /app/.output /app
+COPY --from=build /app/server/db/migrations /app/server/db/migrations
 
-USER bun
 EXPOSE 3000/tcp
-ENTRYPOINT [ "bun", "run", "/app/server/index.mjs" ]
+
+ENTRYPOINT [ "node", "/app/server/index.mjs" ]
