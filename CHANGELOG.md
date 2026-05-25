@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.1.0...v1.1.1) (2026-05-25)
+
+
+### Bug Fixes
+
+* **docker:** remove migrations copy step ([a74717c](https://github.com/meeehdi-dev/meeehdi.dev/commit/a74717c5e6517eac34b44dd2b558770b4d59ab6b))
+
 ## [1.1.0](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.0.2...v1.1.0) (2026-05-25)
 
 
