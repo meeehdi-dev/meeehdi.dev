@@ -20,7 +20,6 @@ FROM base AS production
 ENV NODE_ENV=production
 
 COPY --from=build /app/.output /app
-COPY --from=build /app/server/db/migrations /app/server/db/migrations
 
 EXPOSE 3000/tcp
 
