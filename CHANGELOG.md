@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.1.1...v1.1.2) (2026-05-25)
+
+
+### Bug Fixes
+
+* **deploy:** leave v on image tag and separate coolify curl steps ([eddb97e](https://github.com/meeehdi-dev/meeehdi.dev/commit/eddb97e3dcd835424c61880fdab7f09bd8b36ae1))
+
 ## [1.1.1](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.1.0...v1.1.1) (2026-05-25)
 
 
