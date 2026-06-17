@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.1.2...v1.1.3) (2026-06-17)
+
+
+### Bug Fixes
+
+* **pnpm:** update ([dcfeac8](https://github.com/meeehdi-dev/meeehdi.dev/commit/dcfeac899550db42d3ac7ac700187bd702542680))
+
 ## [1.1.2](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.1.1...v1.1.2) (2026-05-25)
 
 
