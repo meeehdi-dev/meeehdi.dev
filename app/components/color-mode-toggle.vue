@@ -22,7 +22,11 @@ const { tooltip } = defineProps<{ tooltip?: boolean }>();
       variant="ghost"
       class="cursor-pointer md:ml-4"
       size="lg"
-      @click="isDark = !isDark"
+      @click="
+        () => {
+          isDark = !isDark;
+        }
+      "
     >
       <span v-if="tooltip">{{ isDark ? "++" : "--" }}brightness</span>
     </UButton>
