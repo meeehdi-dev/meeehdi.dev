@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.1.3...v1.1.4) (2026-07-25)
+
+
+### Bug Fixes
+
+* **build:** add vue-tsc and fix color mode toggle callback ([4192a12](https://github.com/meeehdi-dev/meeehdi.dev/commit/4192a12cca8b0236c3f5faf3c6fe1fdf4c62616b))
+
 ## [1.1.3](https://github.com/meeehdi-dev/meeehdi.dev/compare/v1.1.2...v1.1.3) (2026-06-17)
 
 
