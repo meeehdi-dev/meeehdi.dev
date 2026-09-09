@@ -20,8 +20,8 @@
     "@nuxtjs/turnstile": "1.1.3",
     "discord.js": "^14.27.0",
     "nuxt": "^4.5.2",
-    "oxfmt": "^0.65.0",
-    "oxlint": "^1.80.0",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
     "zod": "^4.5.4"
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@iconify-json/fa6-brands": "^1.2.6",
     "@iconify-json/fa6-solid": "^1.2.4",
-    "@iconify-json/lucide": "^1.2.127",
+    "@iconify-json/lucide": "^1.2.129",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.11"
   },
