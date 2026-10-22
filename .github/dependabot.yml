@@ -51,7 +51,7 @@ updates:
       prefix: "chore"
       include: "scope"
     groups:
-      docker-minor-patch:
+      github-actions-minor-patch:
         patterns:
           - "*"
         update-types:

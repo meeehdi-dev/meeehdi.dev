@@ -1,5 +1,5 @@
 import { EmbedBuilder, WebhookClient } from "discord.js";
-import { H3Event } from "h3";
+import type { H3Event } from "h3";
 
 export const useDiscordWebhook = (event: H3Event) => {
   const client = new WebhookClient({
