@@ -1,8 +1,9 @@
-FROM node:24-alpine AS base
+FROM node:lts-alpine AS base
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME/bin:$PATH"
-RUN corepack enable
+# Node 26+ images no longer ship Corepack.
+RUN npm install -g corepack && corepack enable
 
 WORKDIR /app
 

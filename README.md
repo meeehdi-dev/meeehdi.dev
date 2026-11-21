@@ -1,6 +1,6 @@
 # meeehdi.dev
 
-Personal site built with Nuxt and Nuxt UI. Use Node 24 LTS and the pnpm version in `package.json` (Corepack reads `packageManager`).
+Personal site built with Nuxt and Nuxt UI. Use the latest Node LTS (`mise install` selects it; `engines.node` requires at least 26) and the pnpm version in `package.json` (Corepack reads `packageManager`).
 
 ## Development and quality checks
 
@@ -52,7 +52,7 @@ Configure the application in Coolify:
 | Application port    | `3000`                                                   |
 | Domain / TLS        | Preserve the existing production domain and TLS settings |
 
-The existing multi-stage Dockerfile uses the maintained `node:24-alpine` image, frozen pnpm install, and standalone Nuxt `.output` server. Corepack bootstraps pnpm from the manifest; the tracked local CLI uses the same version. No separate version pin or production dependency installation is needed.
+The existing multi-stage Dockerfile uses the maintained `node:lts-alpine` image, frozen pnpm install, and standalone Nuxt `.output` server. Corepack bootstraps pnpm from the manifest; the tracked local CLI uses the same version. No separate version pin or production dependency installation is needed.
 
 Set these **runtime** environment variables, as listed in `.env.example`:
 
@@ -74,7 +74,7 @@ Do not put secrets in build arguments or the image. `.env*`, dependencies, and g
 
 ## Dependency maintenance
 
-Dependabot remains daily for npm, Docker, and GitHub Actions, with one-day cooldowns and minor/patch grouping; majors remain separate. The exact `pnpm` devDependency makes the CLI discoverable: keep it and `packageManager` synchronized, regenerate the lockfile with that version, then run the quality checks and Docker smoke test. Stay on Node 24 LTS, not the newer non-LTS major.
+Dependabot remains daily for npm, Docker, and GitHub Actions, with one-day cooldowns and minor/patch grouping; majors remain separate. The exact `pnpm` devDependency makes the CLI discoverable: keep it and `packageManager` synchronized, regenerate the lockfile with that version, then run the quality checks and Docker smoke test.
 
 ### Refresh inventory (registry checked 2026-10-22)
 
