@@ -50,6 +50,7 @@ Configure the application in Coolify:
 | Base directory      | `/`                                                      |
 | Dockerfile location | `/Dockerfile`                                            |
 | Application port    | `3000`                                                   |
+| Health check        | `GET /api/health`, default timing                        |
 | Domain / TLS        | Preserve the existing production domain and TLS settings |
 
 The existing multi-stage Dockerfile uses the maintained `node:lts-alpine` image, frozen pnpm install, and standalone Nuxt `.output` server. Corepack bootstraps pnpm from the manifest; the tracked local CLI uses the same version. No separate version pin or production dependency installation is needed.
